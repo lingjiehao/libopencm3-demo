@@ -16,7 +16,12 @@
 ##
 export PATH:=D:/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin;D:/Documents/Work/stm32/venv/Scripts;$(PATH)
 
-BINARY=uart-retarget
+BINARY=rtt
 DEVICE=stm32l476rg
+
+OBJS += \
+RTT/SEGGER_RTT.o \
+RTT/SEGGER_RTT_Syscalls_GCC.o \
+RTT/SEGGER_RTT_printf.o
 
 include ../Makefile.include
