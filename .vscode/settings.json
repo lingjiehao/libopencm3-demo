@@ -1,0 +1,9 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "GitBash": {
+            "path": "D:\\PortableGit\\bin\\bash.exe"
+          },
+    },
+  "terminal.integrated.defaultProfile.windows": "GitBash",
+  "cortex-debug.variableUseNaturalFormat": true
+}

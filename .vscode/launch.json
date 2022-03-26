@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "./src/stm32/l4/basics/basics.elf",
+            "serverpath": "C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "STM32L476RG",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "servertype": "jlink",
+            "svdFile": "${workspaceRoot}/svd/STM32L4x6.svd",
+            "gdbPath": "D:/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb.exe",
+            //https://github.com/Marus/cortex-debug/wiki/SEGGER-RTT-support#examples-examples
+            "rttConfig": {
+                "enabled": false,
+                "address": "auto",
+                // "clearSearch": false    // OpenOCD users may have to un-comment this
+                "decoders": [
+                    {
+                        "port": 0,
+                        "type": "console"
+                    }
+                ]
+            }
+        }
+    ]
+}
